@@ -1,0 +1,953 @@
+@font-face {
+  font-family: "Raleway Regular";
+  src: url("../fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway Medium";
+  src: url("../fonts/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: "Raleway SemiBold";
+  src: url("../fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Raleway ExtraBold";
+  src: url("../fonts/Raleway-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../fonts/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+/***************** GLOBAL **********************/
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.wrap {
+  width: 1180px;
+  max-width: 1180;
+  margin: auto;
+  padding: 0 10px;
+}
+
+button {
+  outline: none;
+}
+
+iframe {
+  width: 100%;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 20px 35px;
+  position: relative;
+  border: none;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn.primary {
+  background: #998675;
+  font-family: "Raleway ExtraBold";
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.btn__hover {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #736357;
+  bottom: 0;
+  left: 0;
+  border-radius: .25rem;
+  transition: .3s;
+}
+
+.btn.primary:hover .btn__hover {
+  height: 100%;
+  transition: .3s;
+}
+
+
+/***************** NAVBAR **********************/
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  z-index: 10;
+}
+
+.navbar .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  height: 54px;
+}
+
+.navbar__logo img {
+  height: 100%;
+}
+
+.navbar__menu {
+  display: flex;
+  padding: 15px 0 0 0;
+}
+
+.navbar__menu__item {
+  padding: 0 0 0 25px;
+}
+
+.navbar__menu__item > a {
+  font-family: "Montserrat Light";
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.navbar__menu__item:hover > a {
+  color: #c7b299;
+  transition: .2s;
+}
+
+
+/***************** HEADER **********************/
+
+.header {
+  height: 100vh;
+  position: relative;
+}
+
+.header__slider {
+  width: 100%;
+}
+
+.header__slider__slide {
+  height: 100vh;
+}
+
+.header__slider__slide.s1 {
+  background: url('../img/SLIDER.png');
+  background-size: cover;
+}
+
+.header__slider__slide.s2 {
+  background: url('../img/mountains-2.jpg');
+  background-size: cover;
+}
+
+.header__slider__slide.s3 {
+  background: url('../img/mountains-3.jpg');
+  background-size: cover;
+}
+
+.header__slider__slide__content {
+  height: 100%;
+}
+
+.header__title {
+  text-align: center;
+  color: #fff;
+}
+
+.header__title h1 {
+  font-size: 52px;
+  font-family: "Raleway ExtraBold";
+  letter-spacing: 1.5px;
+}
+
+.header__title h2 {
+  font-size: 36px;
+  font-family: "Raleway Medium";
+}
+
+.header__title h4 {
+  font-size: 16px;
+  font-family: "Montserrat Light";
+}
+
+.header__title .btn {
+  margin: 34px 0 0 0;
+}
+
+.header__slider__arrow {
+  position: absolute;
+  z-index: 1;
+  top: 45vh;
+}
+
+.header__slider__arrow.left {
+  left: 10%;
+}
+
+.header__slider__arrow.right {
+  right: 10%;
+}
+
+.header__slider__dots {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.header__slider__dots li {
+  padding: 0 5px;
+}
+
+.header__slider__dots button {
+  text-indent: -9999px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background: #908e8f;
+}
+
+.header__slider__dots > li.slick-active button {
+  border: 1px solid #d3c1ad;
+  background: none;
+}
+
+
+/***************** SERVICES **********************/
+
+.services .wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 75px 10px;
+}
+
+.service {
+  width: 280px;
+  text-align: center;
+  cursor: default;
+}
+
+.service__img {
+  margin: 0 0 25px 0;
+}
+
+.service .service__img > .service__img__icon {
+  display: inline;
+  opacity: 1;
+  transition: .3s;
+}
+
+.service .service__img > .service__img__icon_hover {
+  display: none;
+  opacity: 0;
+  transition: .3s;
+}
+
+.service h3 {
+  font-size: 22px;
+  font-family: "Raleway SemiBold";
+  color: #555555;
+  transition: .3s;
+}
+
+.service h5 {
+  font-size: 14px;
+  font-family: "Montserrat Light";
+  color: #959595;
+  transition: .3s;
+}
+
+.service__dash {
+  height: 3px;
+  width: 70px;
+  background: #f1eee9;
+  margin: 30px auto 0 auto;
+  transition: .3s;
+}
+
+.service:hover > .service__img > .service__img__icon {
+  display: none;
+  opacity: 0;
+  transition: .3s;
+}
+
+.service:hover > .service__img > .service__img__icon_hover {
+  display: inline;
+  opacity: 1;
+  transition: .3s;
+}
+
+.service:hover > h3 {
+  color: #c7b299;
+  transition: .3s;
+}
+
+.service:hover > .service__dash {
+  background: #c7b299;
+  transition: .3s;
+}
+
+
+/***************** IDEAS **********************/
+
+.ideas {
+  background: #fbfaf8;
+  padding: 80px 0 0 0;
+}
+
+.ideas h2 {
+  font-size: 30px;
+  text-align: center;
+  columns: #555555;
+  font-family: "Raleway SemiBold";
+}
+
+.ideas h4 {
+  max-width: 800px;
+  font-size: 16px;
+  font-family: "Montserrat Light";
+  text-align: center;
+  color: #8c8c8c;
+  margin: 30px auto 40px auto;
+}
+
+.ideas__img {
+  margin: auto;
+}
+
+.ideas__img img {
+  width: 100%;
+}
+
+.ideas__footer {
+  padding: 45px 0;
+  background: linear-gradient(to right, #211b19, #4e3427);
+}
+
+.ideas__footer .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ideas__footer__title h2 {
+  font-family: "Raleway Regular";
+  font-size: 28px;
+  color: #fff;
+  text-align: left;
+}
+
+.ideas__footer__title h2 > span {
+  color: #c7b299;
+  font-family: "Montserrat Light";
+}
+
+.ideas__footer__title h4 {
+  font-family: "Montserrat Light";
+  font-size: 18px;
+  color: #615855;
+  margin: 0;
+  text-align: left;
+}
+
+
+/***************** PROJECTS **********************/
+
+.projects {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.projects__title {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.projects__title h2 {
+  font-family: "Raleway SemiBold";
+  font-size: 30px;
+  color: #555555;
+}
+
+.projects__title h4 {
+  font-family: "Montserrat Light";
+  font-size: 16px;
+  color: #8c8c8c;
+}
+
+.projects__navs {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.projects__navs li {
+  padding: 10px 25px;
+  margin: 0 5px;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+  cursor: default;
+  color: #9b9b9b;
+  transition: .2s;
+}
+
+.projects__navs li:hover, .projects__navs li.active {
+  border: 1px solid #998675;
+  color: #fff;
+  background: #998675;
+  transition: .2s;
+}
+
+.projects__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.projects__item {
+  width: 370px;
+  cursor: default;
+  margin: 0 0 25px 0;
+}
+
+.projects__item__img {
+  position: relative;
+
+}
+
+.projects__item__img__hover {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects__item__img__hover .project-link {
+  display: inline;
+  margin: 0 25px 0 0;
+}
+
+.projects__item__img__hover .project-link-hover {
+  display: none;
+  margin: 0 25px 0 0;
+}
+
+.projects__item__img__hover .project-lupa {
+  display: inline;
+}
+
+.projects__item__img__hover .project-lupa-hover {
+  display: none;
+}
+
+.projects__item__link__hover:hover .project-link {
+  display: none;
+}
+
+.projects__item__link__hover:hover .project-link-hover {
+  display: inline;
+}
+
+.projects__item__lupa__hover:hover .project-lupa {
+  display: none;
+}
+
+.projects__item__lupa__hover:hover .project-lupa-hover {
+  display: inline;
+}
+
+.projects__item__title {
+  background: #fbfaf8;
+  padding: 30px 25px;
+  position: relative;
+  transition: .2s;
+}
+
+.projects__item__title h3 {
+  font-family: "Raleway Medium";
+  font-size: 20px;
+  color: #c7b299;
+  transition: .2s;
+}
+
+.projects__item__title h6 {
+  font-family: "Montserrat Light";
+  font-size: 14px;
+  color: #e8e7e6;
+  transition: .2s;
+}
+
+.projects__item__title__arrow {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #fbfaf8;
+  position: absolute;
+  z-index: 2;
+  top: -15px;
+  transition: .2s;
+}
+
+.projects__item:hover .projects__item__img__hover {
+  opacity: 1;
+  transition: .3s;
+}
+
+.projects__item:hover .projects__item__title {
+  background: #362f2d;
+  transition: .2s;
+}
+
+.projects__item:hover .projects__item__title h3 {
+  transition: .2s;
+  color: #fff;
+}
+
+.projects__item:hover .projects__item__title h6 {
+  transition: .2s;
+  color: #c7b299;
+}
+
+.projects__item:hover .projects__item__title__arrow {
+  border-bottom: 15px solid #362f2d;
+  transition: .2s;
+}
+
+.projects .load-more {
+  display: block;
+  margin: 15px auto;
+}
+
+
+/***************** VIDEO **********************/
+
+
+.video {
+  padding: 210px 0;
+  background: url('../img/video-bg.png');
+  background-size: cover;
+}
+
+.video__title {
+  text-align: center;
+  margin: auto;
+  max-width: 800px; 
+}
+
+.video__title img {
+  margin: 0 0 40px 0;
+}
+
+.video__title h2 {
+  font-family: "Raleway Medium";
+  font-size: 30px;
+  color: #fff;
+}
+
+.video__title h4 {
+  font-family: "Montserrat Light";
+  font-size: 16px;
+  color: #fff;
+}
+
+.video__title h5 {
+  font-family: "Montserrat Regular";
+  font-size: 14px;
+  color: #c7b299;
+  margin: 40px 0 0 0;
+}
+
+
+/***************** MOBILE **********************/
+
+.mobile {
+  padding: 75px 0 0 0;
+}
+
+.mobile .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile__title h2 {
+  font-family: "Raleway SemiBold";
+  font-size: 30px;
+  color: #555555;
+}
+
+.mobile__title p {
+  font-family: "Montserrat Light";
+  font-size: 16px;
+  color: #9d9d9d;
+  margin: 35px 0 0 0;
+}
+
+.mobile__title__list {
+  margin: 35px 0 0 50px;
+}
+
+.mobile__title__list li {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.mobile__title__list li > img {
+  width: 20px;
+  height: 20px;
+  margin: 0 30px 0 0;
+}
+
+.mobile__title__list li > h5 {
+  font-family: "Montserrat Light";
+  font-size: 16px;
+  color: #9d9d9d;
+  margin: 1px 0 0 0;
+}
+
+.mobile__footer {
+  padding: 70px 0;
+  background: linear-gradient(to right, #211b19, #4e3427);
+}
+
+.stats {
+  text-align: center;
+  margin: 0 35px;
+}
+
+.stats h1 {
+  font-family: "Montserrat Light";
+  font-size: 48px;
+  color: #fff;
+  margin: 30px 0 20px 0;
+}
+
+.stats h4 {
+  font-family: "Montserrat Light";
+  font-size: 14px;
+  color: #c7b299;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+}
+
+.stats__dash {
+  height: 2px;
+  width: 30px;
+  background: #fff;
+  margin: auto;
+}
+
+
+/***************** POSTS **********************/
+
+.posts {
+  padding: 80px 0;
+}
+
+.posts__title {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.posts__title h2 {
+  font-family: "Raleway SemiBold";
+  font-size: 30px;
+  color: #555555;
+}
+
+.posts__title h4 {
+  font-family: "Montserrat Light";
+  font-size: 16px;
+  color: #9e9e9e;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.post {
+  width: 370px;
+  border: 1px solid #f8f8f8;
+  position: relative;
+  margin: 0 15px;
+}
+
+.post__img {
+  position: relative;
+  overflow: hidden;
+  height: 210px;
+}
+.post__img img{
+  width: 100%;
+}
+
+.post__img_hover {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .3s;
+}
+
+.post__title {
+  padding: 30px;
+  transition: .3s;
+}
+
+.post__title h3 {
+  font-family: "Raleway Medium";
+  font-size: 20px;
+  color: #555555;
+  transition: .3s;
+}
+
+.post__title h5 {
+  font-family: "Montserrat Light";
+  font-size: 14px;
+  color: #d6d6d6;
+  margin: 20px 0 25px 0;
+  transition: .3s;
+}
+
+.post__title h4 {
+  font-family: "Montserrat Light";
+  font-size: 14px;
+  color: #c7b299;
+  display: flex;
+  align-items: center;
+}
+
+.post__title h4 > img {
+  margin: 0 0 0 10px;
+}
+
+.post__date {
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+.post__date__day {
+  font-family: "Montserrat Light";
+  font-size: 24px;
+  background: #363636;
+  transition: .3s;
+}
+
+.post__date__month {
+  font-family: "Montserrat Light";
+  font-size: 12px;
+  background: #252525;
+  padding: 5px 0;
+  transition: .3s;
+}
+
+.post:hover .post__img_hover {
+  opacity: 1;
+  transition: .3s;
+}
+
+.post:hover .post__title {
+  background: #362f2d;
+  transition: .3s;
+}
+
+.post:hover .post__title > h3 {
+  color: #837567;
+  transition: .3s;
+}
+
+.post:hover .post__title > h5 {
+  color: #fff;
+  transition: .3s;
+}
+
+.post:hover .post__date__day {
+  background: #c7b299;
+  transition: .3s;
+}
+
+.post:hover .post__date__month {
+  background: #a48d72;
+  transition: .3s;
+}
+
+.post__slider__arrows {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 0 0;
+}
+
+.post__slider__arrows div {
+  margin: 0 5px;
+}
+
+
+/***************** SPONSORS **********************/
+
+.sponsors {
+  height: 485px;
+  background: url('../img/sponsors-bg.png');
+  background-size: cover;
+}
+
+.sponsors .wrap {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsors__img {
+  margin: 0 42px;
+}
+
+
+/***************** FOOTER **********************/
+
+.footer {
+  background: #191919;
+  padding: 70px 0;
+}
+
+.footer .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__item {
+  width: 270px;
+}
+
+.footer__item__logo {
+  margin: 0 0 25px 0;
+}
+
+.footer__item p {
+  font-family: "Montserrat Light";
+  font-size: 14px;
+  color: #4f4f4f;
+}
+
+.footer__item h3 {
+  font-family: "Raleway SemiBold";
+  font-size: 24px;
+  color: #fff;
+  margin: 25px 0 25px 0;
+}
+
+.footer__item h5 {
+  font-family: "Montserrat Regular";
+  font-size: 14px;
+  color: #d1d1d1;
+  margin: 25px 0 0 0;
+}
+
+.footer__item h6 {
+  font-family: "Montserrat Light";
+  font-size: 12px;
+  color: #363636;
+}
+
+.footer__item hr {
+  border: none;
+  border: 1px solid #252525;
+}
+
+.footer__item__widgets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__item__widgets img {
+  margin: 5px 0;
+}
+
+.footer__item__post:hover p {
+  color: #c7b299;
+  transition: .3s;
+}
+
+.footer__item__post:hover h6 {
+  color: #fff;
+  transition: .3s;
+}
+
+.footer__item__post span {
+  color: #00bff3;
+}
+
+.footer__item__post span.link {
+  color: #959595;
+}
+
+
+.privancy {
+  padding: 45px 0;
+  background: #111111;
+}
+
+.privancy .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.privancy__navs {
+  display: flex;
+  margin: 0;
+}
+
+.privancy__nav {
+  font-family: "Montserrat Light";
+  font-size: 13px;
+  color: #555555;
+  cursor: default;
+}
+
+.privancy__navs .dash {
+  border-left: 1px solid #232323;
+  margin: 0 12px;
+}
+
+.privancy__nav:hover {
+  color: #ad9b85;
+  transition: .3s;
+}
+
+.privancy__nav span {
+  color: #959595;
+}
